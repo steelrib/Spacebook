@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SpaceBook</title>
+      <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+    <script src="https://kit.fontawesome.com/c2dde53772.js" crossorigin="anonymous"></script>
+
+    <link type="text/javascript" src="javascript.js"></link>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header1">
+          <h1>SpaceBook</h1>
+      </div>
+      <div id="main">
+        <div id="welcomebox">
+          <div id="h3">
+            <h3>Welcome to SpaceBook!</h3>
+          </div>
+          <div id="welcomeparagraph">
+            <p id="firstp">Greetings earthling!</p>
+            <p>We're thrilled to have you here! To get started,
+              Please fill out the <a href="#form">form below</a> !!</p>
+          </div>
+        </div>
+        <div>
+          <img id="image" src="https://cdn.pixabay.com/photo/2019/04/06/06/44/astronaut-4106766_960_720.jpg" width="240" height="360" alt="astronaut">
+      </div>
+      </div>
+      <div id="header2">
+      <h2>Create a SpaceBook profile below:</h2>
+        </div>
+        <div id="formcontainer">
+            <form id="form" action="success.html" method="post" onsubmit="return validateForm()">
+              <fieldset id="fieldset">
+                <h2>Please fill out all fields:</h2>
+
+              <div id="namediv" class="row">
+                <i class="fas fa-user-circle"></i>
+                <label for="name"> Enter Your Name: </label>
+                <input type="text" id="name" name="name" value="" placeholder="Jerry Garcia" onblur="return validateName();">
+                <span id="help-text1"></span>
+              </div>
+
+
+              <div id="emaildiv" class="row">
+                <i class="far fa-envelope"></i>
+                <label for="email">E-Mail: </label>
+                <input type="email" id="email" name="email" value="" placeholder="JGarcia@email.com" onblur="validateEmail();">
+                <span id="help-text2"></span>
+              </div>
+
+
+              <div id="usernamediv" class="row">
+                <i class="fas fa-user-astronaut"></i>
+                <label for="username">Create a Username: </label>
+                <input type="text" id="username" name="username" value="" placeholder="CaptainTrips68" onblur="validateUserName();">
+                <span id="help-text3"></span>
+              </div>
+
+              <div id="pass1div" class="row">
+                <i class="fas fa-key"></i>
+                <label for="pass1">Create Password:</label>
+                <input type="password" id="pass1" name="pass1" value="" placeholder="Password" onblur="validatePass1();">
+                <span id="help-text4"></span>
+              </div>
+
+              <div id="pass2div" class="row">
+                <i class="fas fa-key"></i>
+                <label for="pass2">Confirm Password: </label>
+                <input type="password" id="pass2" name="pass2" value="" placeholder="Re-Enter Password" onblur="return validatePass2();">
+                <span id="help-text5"></span>
+              </div>
+
+              <div id="experiencediv" class="row">
+                <i class="fas fa-yin-yang"></i>
+                <label for="experience">Select Experience Level: </label>
+                <select id="experience" name="experience" required>
+                  <option disabled selected value> -- select an option -- </option>
+                  <option value="first-timer">First Timer</option>
+                  <option value="still-a-noob">Still A Noob</option>
+                  <option value="jaded-vet">Jaded Vet</option>
+                </select>
+                <span id="help-text6"></span>
+              </div>
+              <div id="planetsdiv" class="row">
+
+                <p>Select which planets you would like to visit:</p>
+                <i class="fas fa-globe-americas"></i>
+                <label for="planet1">Mercury</label>
+                <input type="checkbox" id="planet1" class="planets" name="planet1" value="mercury">
+                <label for="planet2">Venus</label>
+                <input type="checkbox" id="planet2" class="planets" name="planet2" value="venus">
+                <label for="planet3">Earth</label>
+                <input type="checkbox" id="planet3" class="planets" name="planet3" value="earth">
+                <label for="planet4">Mars</label>
+                <input type="checkbox" id="planet4" class="planets" name="planet4" value="mars">
+                <label for="planet5">Jupiter</label>
+                <input type="checkbox" id="planet5" class="planets" name="planet5" value="jupiter">
+                <label for="planet6">Neptune</label>
+                <input type="checkbox" id="planet6" class="planets" name="planet6" value="neptune">
+                <label for="planet7">Saturn</label>
+                <input type="checkbox" id="planet7" class="planets" name="planet7" value="saturn">
+                <label for="planet8">Uranus</label>
+                <input type="checkbox" id="planet8" class="planets" name="planet8" value="uranus">
+                <label for="planet9">Pluto</label>
+                <input type="checkbox" id="planet9" class="planets" name="planet9" value="pluto">
+                <span class="help-text7"></span>
+              </div>
+              <div>
+                <input type="submit" id="button" name="submit" value="Submit">
+              </div>
+
+              </fieldset>
+            </form>
+          </div>
+          <footer>Copyright Steel Rib 2021</footer>
+        </div>
+
+  </body>
+</html>
